@@ -1,0 +1,15 @@
+# http://docs.python.org/2/distutils/sourcedist.html#the-manifest-in-template
+
+# LICENSE*, README*, description NOT required
+exclude description
+exclude LICENSE*
+exclude README*
+
+# ignore submodules by default
+exclude *.py/*
+
+# include only required submodules files
+include setup.py/*.py
+include *py_modules*/*.py
+include *scripts*/*.py
+include *version*/*.py

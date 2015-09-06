@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+__all__=["scripts"]
+import os
+from os.path import *
+
+dir = dirname(dirname(__file__))
+if not dir: dir="."
+
+path  = join(dir,"scripts")
+if exists(path):
+    scripts = map(lambda name:join("scripts",name),
+    	filter(lambda f:isfile(join(path,f)) and f.find(" ")<0,
+    		os.listdir(path)
+    	)
+    )
+
+if __name__=="__main__":
+	for k in __all__:
+		if k in globals():
+			print("%s: %s" % (k,globals()[k]))
