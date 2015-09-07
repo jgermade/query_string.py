@@ -1,11 +1,6 @@
-
-
 <p align="center">
 	<b>query_string (URL part) library</b>
 </p>
-
-
-
 
 Install
 -------
@@ -13,9 +8,7 @@ Install
 from [github.com](http://github.com/russianidiot/query_string.py):
 `pip install git+git://github.com/russianidiot/query_string.py.git`
 
-
 from [pypi.python.org](https://pypi.python.org): `pip install query_string`
-
 
 Examples
 --------
@@ -23,40 +16,12 @@ Examples
 	query_string.py/Examples
 </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 Bug tracker - [github.com/russianidiot/query_string.py/issues](http://github.com/russianidiot/query_string.py/issues)
 <img src="http://russianidiot.github.io/images/issue/16.png" />
 
 ---
-
-
-
-
-
 
 <p align="center">
 my Python packages 
@@ -66,7 +31,6 @@ my Python packages
 my Python repos <a href="http://russianidiot.github.com/russianidiot/python/">russianidiot.github.io/python/</a>
 <img src="http://russianidiot.github.io/images/python/16.png" />
 </p>
-
 
 <p align="center">
 	all repos <a href="http://russianidiot.github.com/">russianidiot.github.com</a> <img src="http://russianidiot.github.io/images/star/16.png" />
@@ -81,5 +45,3 @@ my Python repos <a href="http://russianidiot.github.com/russianidiot/python/">ru
 	follow me <a href="http://github.com/russianidiot">github.com/russianidiot</a>
 <img src="http://russianidiot.github.io/images/github/16.png" />
 </p>
-
-
