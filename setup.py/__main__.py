@@ -6,6 +6,7 @@ from os.path import *
 from imp import *
 from setuptools import *
 import sys
+import warnings
 
 # https://docs.python.org/2/distutils/setupscript.html
 # https://docs.python.org/3/distutils/setupscript.html
@@ -26,18 +27,23 @@ def main():
 
     sys.path.append(dirname(__file__))
     files = pyfiles(dirname(__file__))
+    # RuntimeWarning: Parent module 'modname' not found while handling absolute import
+    warnings.simplefilter("ignore", RuntimeWarning) 
     for file in files:
         try:
-            mod = __import__(file.replace(".py",""))
-            if not hasattr(mod,'__all__'):
-                raise ValueError("ERROR: %s __all__ required" % file)
-            for k in getattr(mod,"__all__"):
-                if getattr(mod,k):
-                    kwargs[k] = getattr(mod,k)
+            fullpath=join(dir,"setup.py",file)
+            with open(fullpath,'rb') as fp:
+                # .hidden.py invisible for mdfind
+                mod = load_module(file,fp,fullpath,('.py', 'rb', PY_SOURCE))  
+                if not hasattr(mod,'__all__'):
+                    raise ValueError("ERROR: %s __all__ required" % file)
+                for k in getattr(mod,"__all__"):
+                    if getattr(mod,k):
+                        kwargs[k] = getattr(mod,k)
         except AttributeError: # variable from __all__ not initialized
             continue
-        if len(sys.argv)==1 and len(getattr(mod,"__all__"))>0:
-            print("%s: %s" % (file,mod.__all__))
+    if len(sys.argv)==1 and len(getattr(mod,"__all__"))>0:
+        print("%s: %s" % (file,mod.__all__))
 
     name = basename(dir).lower().replace(".py","")
     while name and name[-1]=="_": 

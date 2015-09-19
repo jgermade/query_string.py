@@ -6,9 +6,9 @@ from os.path import *
 dir = dirname(dirname(__file__))
 if not dir: dir="."
 
-# entry_points
+# ./entry_points.txt
 file = join(dir,"entry_points.txt")
-if exists(file):
+if exists(file) and isfile(file):
     lines = open(file).read().splitlines()
     lines = filter(lambda l:l.lstrip().rstrip(),lines)
     entry_points=lines

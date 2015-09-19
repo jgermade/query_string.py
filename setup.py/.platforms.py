@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-__all__=["keywords"]
+__all__=["platforms"]
 from os.path import *
 
 dir = dirname(dirname(__file__))
 if not dir: dir="."
 
-file = join(dir,"keywords.txt")
+file = join(dir,"platforms.txt")
+platforms="ALL" # default
 if exists(file):
-    keywords = open(file).read().lstrip().rstrip()
+    platforms = open(file).read().lstrip().rstrip()
 
 if __name__=="__main__":
 	for k in __all__:

@@ -8,7 +8,7 @@ dir = dirname(dirname(__file__))
 if not dir: dir="."
 
 path  = join(dir,"py_modules")
-if exists(path):
+if exists(path) and isdir(path): # ./py_modules/
     list  = os.listdir(path)
     list = filter(lambda l:splitext(l)[1]==".py",list)
     files  = filter(lambda f:isfile(join(path,f)),list)

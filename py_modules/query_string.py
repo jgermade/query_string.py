@@ -7,8 +7,6 @@ except ImportError:
     from urllib.parse import parse_qs as _parse_qs
 from collections import OrderedDict
 from dict import *
-from isinstance import *
-from none import *
 from public import *
 from self import *
 
@@ -59,7 +57,7 @@ class Query_string(object):
 
     @self
     def remove(self,keys):
-        if not islist(keys):
+        if not isinstance(keys,list):
             keys = [key]
         for key in keys:
             if key in self:
@@ -137,9 +135,9 @@ class Query_string(object):
     def __unicode__(self):
         return unicode(self.__query__)
 
-@none
 @public
 def query_string(url):
+    if not url: return
     scheme,netloc,path,params,query,fragment = urlparse(url)
     if query:
         return Query_string(query)

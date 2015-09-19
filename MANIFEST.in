@@ -12,4 +12,4 @@ exclude *.py/*
 include setup.py/*.py
 include *py_modules*/*.py
 include *scripts*/*.py
-include *version*/*.py
+include *version*/*
