@@ -18,22 +18,17 @@ Examples
 
 ---
 
-Bug tracker - [github.com/russianidiot/query_string.py/issues](http://github.com/russianidiot/query_string.py/issues)
-<img src="http://russianidiot.github.io/images/issue/16.png" />
-
----
-
 <p align="center">
 my Python packages 
-<a href="http://russianidiot.github.com/russianidiot/python/packages">russianidiot.github.io/python/packages</a> <img src="http://russianidiot.github.io/images/python/16.png" />
+<a href="http://russianidiot.github.io/python/packages">russianidiot.github.io/python/packages</a> <img src="http://russianidiot.github.io/images/python/16.png" />
 </p>
 <p align="center">
-my Python repos <a href="http://russianidiot.github.com/russianidiot/python/">russianidiot.github.io/python/</a>
+my Python repos <a href="http://russianidiot.github.io/python/">russianidiot.github.io/python/</a>
 <img src="http://russianidiot.github.io/images/python/16.png" />
 </p>
 
 <p align="center">
-	all repos <a href="http://russianidiot.github.com/">russianidiot.github.com</a> <img src="http://russianidiot.github.io/images/star/16.png" />
+	all repos <a href="http://russianidiot.github.io/">russianidiot.github.io</a> <img src="http://russianidiot.github.io/images/star/16.png" />
 </p>
 
 <p align="center">
