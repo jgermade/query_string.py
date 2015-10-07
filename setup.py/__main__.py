@@ -4,7 +4,10 @@ __all__=[]
 import os
 from os.path import *
 from imp import *
-from setuptools import *
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 import sys
 import warnings
 
@@ -17,11 +20,8 @@ def pyfiles(dir):
     return list
 
 def main():
-    if not dirname(__file__): # python setup.py
-        dir = getcwd()
-    else: # setup.py, python /path/to/setup.py
-        dir = dirname(dirname(__file__))
-
+    dir = dirname(dirname(__file__))
+    if not dir or dir==".": dir=os.getcwd()
     sys.path.append(dir)
     kwargs=dict()
 
@@ -49,10 +49,20 @@ def main():
     while name and name[-1]=="_": 
         name=name[0:-1]
 
+    def isstring(object):
+        try:
+            int(object)
+            return False
+        except ValueError:
+            return True
+        except:
+            return False
     if len(sys.argv)==1 and kwargs:
         print('\nsetup(name="%s",' % name)
-        for i,(k,v) in enumerate(sorted(kwargs.iteritems(),key=lambda (k,v):k),1):
-            print("    %s = %s%s" % (k,'"%s"' % v if isinstance(v,(str,unicode)) else v,"," if i!=len(kwargs) else ""))
+        # for i,(k,v) in enumerate(sorted(kwargs.iteritems(),key=lambda (k,v):k),1): # python2
+        for i,k in enumerate(sorted(list(kwargs.keys())),1): # python3
+            v=kwargs[k]
+            print("    %s = %s%s" % (k,'"%s"' % v if isstring(v) else v,"," if i!=len(kwargs) else ""))
         print(')')  
 
     if len(sys.argv)==1: return

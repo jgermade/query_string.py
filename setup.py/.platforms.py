@@ -7,7 +7,7 @@ dir = dirname(dirname(__file__))
 if not dir: dir="."
 
 file = join(dir,"platforms.txt")
-platforms="ALL" # default
+platforms="any" # default
 if exists(file):
     platforms = open(file).read().lstrip().rstrip()
 

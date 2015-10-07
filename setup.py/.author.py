@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 __all__=["author"]
-from ConfigParser import *
+try:
+	from ConfigParser import * # python2
+except:
+	from configparser import * # python3
 from os.path import *
 
 # username
@@ -12,8 +15,6 @@ if exists(path):
     cfg.read(path)
     if cfg.has_option("pypi","username"):
         author = cfg.get('pypi', 'username')
-        kwargs.update(author=author)
-
 
 if __name__=="__main__":
 	for k in __all__:

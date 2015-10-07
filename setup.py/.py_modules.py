@@ -9,10 +9,10 @@ if not dir: dir="."
 
 path  = join(dir,"py_modules")
 if exists(path) and isdir(path): # ./py_modules/
-    list  = os.listdir(path)
-    list = filter(lambda l:splitext(l)[1]==".py",list)
-    files  = filter(lambda f:isfile(join(path,f)),list)
-    py_modules  = map(lambda f:f.replace(".py",""),files)
+    listdir  = os.listdir(path)
+    pyfiles = filter(lambda l:splitext(l)[1]==".py",listdir)
+    pyfiles  = filter(lambda f:isfile(join(path,f)),pyfiles)
+    py_modules  = list(map(lambda f:f.replace(".py",""),pyfiles))
     if py_modules:
         package_dir={'':"py_modules"}
 

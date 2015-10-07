@@ -19,7 +19,7 @@ else:
     fullpaths = map(lambda name:join(dir,name),names)
     dirs = filter(lambda path:isdir(path),fullpaths)
     packages = filter(lambda path:exists(join(path,"__init__.py")),dirs)
-    packages = map(basename,packages)
+    packages = list(map(basename,packages))
 
 if __name__=="__main__":
     for k in __all__:

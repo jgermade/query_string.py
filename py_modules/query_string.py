@@ -133,7 +133,7 @@ class Query_string(object):
         return self.__query__
 
     def __unicode__(self):
-        return unicode(self.__query__)
+        return str(self.__query__)
 
 @public
 def query_string(url):
@@ -148,3 +148,7 @@ def query_string(url):
 #url = "http://127.0.0.1:8080/pkg_info.gui/bower_components/subl/cgi.py?k=v"
 #url = "https://www.kernel.org/pub/software/scm/git/docs/git-show-branch.html"
 #query = query_string(url)
+
+if __name__=="__main__":
+    pass # todo
+
