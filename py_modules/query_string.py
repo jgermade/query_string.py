@@ -5,7 +5,11 @@ try:
 except ImportError:
     from urllib.parse import *
     from urllib.parse import parse_qs as _parse_qs
-from collections import OrderedDict
+try:
+    from collections import OrderedDict # python2.7+
+except ImportError:
+    # python 2.6 or earlier, use backport
+    from ordereddict import OrderedDict
 from dict import *
 from public import *
 from self import *
