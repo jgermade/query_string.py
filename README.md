@@ -25,10 +25,16 @@
 Install
 -------
 
-from [github.com](http://github.com/russianidiot/query_string.py):
+[github.com](http://github.com/russianidiot/query_string.py):
 `pip install git+git://github.com/russianidiot/query_string.py.git`
 
-from [pypi.python.org](https://pypi.python.org): `pip install query_string`
+[pypi.python.org](https://pypi.python.org): `pip install query_string`
+
+[download](https://github.com/russianidiot/query_string.py/archive/master.zip): `python setup.py install` or `setup.py/.setup.py develop.command` 
+
+---
+
+**Tested**: python 2.6, 2.7, 3+
 
 ---
 
