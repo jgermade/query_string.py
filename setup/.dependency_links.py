@@ -11,7 +11,7 @@ for name in ["dependency_links.txt","dependency.txt"]:
     file = join(dir,name)
     if exists(file) and isfile(file):
         lines = open(file).read().splitlines()
-        lines = filter(lambda l:l.lstrip().rstrip(),lines)
+        lines = list(filter(lambda l:l.lstrip().rstrip(),lines))
         dependency_links+=lines
 if lines:
 	dependency_links = lines

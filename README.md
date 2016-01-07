@@ -31,9 +31,7 @@ Install
 
 [pypi.python.org](https://pypi.python.org): `pip install query_string`
 
-[download](https://github.com/russianidiot/query_string.py/archive/master.zip): `python setup.py install` or `setup.py/.setup.py develop.command` 
-
-	
+[download](https://github.com/russianidiot/query_string.py/archive/master.zip): `python setup.py install` or `setup/.setup.py develop.command` 
 
 	
 

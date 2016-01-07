@@ -10,7 +10,7 @@ if not dir: dir="."
 file = join(dir,"entry_points.txt")
 if exists(file) and isfile(file):
     lines = open(file).read().splitlines()
-    lines = filter(lambda l:l.lstrip().rstrip(),lines)
+    lines = list(filter(lambda l:l.lstrip().rstrip(),lines))
     entry_points=lines
 
 if __name__=="__main__":

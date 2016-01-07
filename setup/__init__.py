@@ -5,7 +5,7 @@ import os
 from os.path import *
 from imp import *
 try:
-    from setuptools import setup
+    from setuptools import setup # python setup.py develop
 except ImportError:
     from distutils.core import setup
 import sys
@@ -16,7 +16,7 @@ import warnings
 
 def pyfiles(dir):
     list = os.listdir(dir)
-    list = filter(lambda l:splitext(l)[1]==".py",list)
+    list = filter(lambda l:splitext(l)[1]==".py" and l.find("__")<0,list)
     return list
 
 def main():
@@ -28,10 +28,10 @@ def main():
     sys.path.append(dirname(__file__))
     files = pyfiles(dirname(__file__))
     # RuntimeWarning: Parent module 'modname' not found while handling absolute import
-    warnings.simplefilter("ignore", RuntimeWarning) 
+    warnings.simplefilter("ignore", RuntimeWarning)
     for file in files:
         try:
-            fullpath=join(dir,"setup.py",file)
+            fullpath=join(dir,"setup",file)
             with open(fullpath,'rb') as fp:
                 # .hidden.py invisible for mdfind
                 mod = load_module(file,fp,fullpath,('.py', 'rb', PY_SOURCE))  
@@ -68,5 +68,5 @@ def main():
     if len(sys.argv)==1: return
     setup(name=name,**kwargs)
 
-if __name__=="__main__":
-    main()
+#if __name__=="__main__":
+main()

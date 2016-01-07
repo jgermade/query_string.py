@@ -16,7 +16,7 @@ if exists(no_install_requires):
 	    file = join(dir,name)
 	    if exists(file):
 	        lines = open(file).read().splitlines()
-	        lines = filter(lambda l:l.lstrip().rstrip(),lines)
+	        lines = list(filter(lambda l:l.lstrip().rstrip(),lines))
 	        install_requires=lines
 
 	if __name__=="__main__":

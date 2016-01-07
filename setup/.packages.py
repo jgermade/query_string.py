@@ -14,11 +14,12 @@ if exists(file):
 else:
     # packages
     names = os.listdir(dir)
-    names = filter(lambda _:_.lower()!="tests",names) # exclude "tests"
-    names = filter(lambda name:name.find(".")<0,names) # exclude *.* names with dot
-    fullpaths = map(lambda name:join(dir,name),names)
-    dirs = filter(lambda path:isdir(path),fullpaths)
-    packages = filter(lambda path:exists(join(path,"__init__.py")),dirs)
+    names = list(filter(lambda _:_.lower()!="tests",names)) # exclude "tests"
+    names = list(filter(lambda _:_.lower()!="setup",names)) # exclude "setup"
+    names = list(filter(lambda name:name.find(".")<0,names)) # exclude *.* names with dot
+    fullpaths = list(map(lambda name:join(dir,name),names))
+    dirs = list(filter(lambda path:isdir(path),fullpaths))
+    packages = list(filter(lambda path:exists(join(path,"__init__.py")),dirs))
     packages = list(map(basename,packages))
 
 if __name__=="__main__":

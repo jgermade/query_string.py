@@ -13,11 +13,11 @@ if exists(file) and isfile(file): # ./url.txt
 else:
     path  = join(dir,"scripts")
     if exists(path) and isdir(file):
-        scripts = map(lambda name:join("scripts",name),
-            filter(lambda f:isfile(join(path,f)) and f.find(" ")<0,
+        scripts = list(map(lambda name:join("scripts",name),
+            list(filter(lambda f:isfile(join(path,f)) and f.find(" ")<0,
                 os.listdir(path)
-            )
-        )
+            ))
+        ))
 
 if __name__=="__main__":
     for k in __all__:
