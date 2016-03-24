@@ -1,1 +1,1 @@
-query_string (URL part) library
+query_string(string) function - get url query string dict

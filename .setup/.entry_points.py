@@ -3,15 +3,18 @@
 __all__=["entry_points"]
 from os.path import *
 
-dir = dirname(dirname(__file__))
-if not dir: dir="."
+repo = dirname(dirname(__file__))
+if not repo: repo="."
 
 # ./entry_points.txt
-file = join(dir,"entry_points.txt")
-if exists(file) and isfile(file):
-    lines = open(file).read().splitlines()
+path = join(repo,"entry_points.txt")
+if exists(path) and isfile(path):
+    lines = open(path).read().splitlines()
     lines = list(filter(lambda l:l.lstrip().rstrip(),lines))
     entry_points=lines
+else:
+    if __name__=="__main__":
+        print("SKIP: %s NOT EXISTS" % path)
 
 if __name__=="__main__":
 	for k in __all__:

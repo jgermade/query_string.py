@@ -3,12 +3,12 @@
 __all__=["dependency_links"]
 from os.path import *
 
-dir = dirname(dirname(__file__))
-if not dir: dir="."
+repo = dirname(dirname(__file__))
+if not repo: repo="."
 
 lines=[]
 for name in ["dependency_links.txt","dependency.txt"]:
-    file = join(dir,name)
+    file = join(repo,name)
     if exists(file) and isfile(file):
         lines = open(file).read().splitlines()
         lines = list(filter(lambda l:l.lstrip().rstrip(),lines))

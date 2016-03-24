@@ -3,11 +3,10 @@
 __all__=["long_description"]
 from os.path import *
 
-dir = dirname(dirname(__file__))
-if not dir: dir="."
+repo = abspath(dirname(dirname(__file__)))
 
 for name in ["README.rst","README","README.txt"]:
-    fullpath = join(dir,name)
+    fullpath = join(repo,name)
     if not exists(fullpath): continue
     if not isfile(fullpath): continue
     long_description = open(fullpath).read()

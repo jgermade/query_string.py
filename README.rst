@@ -1,15 +1,25 @@
+.. image:: https://img.shields.io/pypi/v/query_string.svg
+   :target: https://pypi.python.org/pypi/query_string
+
+.. image:: https://img.shields.io/pypi/pyversions/query_string.svg
+   :target: https://pypi.python.org/pypi/query_string
+
+.. image:: https://img.shields.io/pypi/dm/query_string.svg
+   :target: https://pypi.python.org/pypi/query_string
+
 	
+
 Install
-'''''''
+~~~~~~~
 
 github.com_: :code:`pip install git+git://github.com/russianidiot/query_string.py.git`
 
 pypi.python.org_: :code:`pip install query_string`
 
-download_: :code:`python setup.py install` or :code:`setup/.setup.py develop.command`
+download_: :code:`[ -e requirements.txt ] && pip install -r requirements.txt; python setup.py install`
 
 .. _github.com: http://github.com/russianidiot/query_string.py
-.. _pypi.python.org: https://pypi.python.org/pypi/query_string
+.. _pypi.python.org: https://pypi.python.org/pypi/query_string.py
 .. _download: https://github.com/russianidiot/query_string.py/archive/master.zip
 
 	
@@ -18,10 +28,36 @@ download_: :code:`python setup.py install` or :code:`setup/.setup.py develop.com
 
 	
 
-------------
+Usage
+~~~~~
 
-**Tested**: python 2.6, 2.7, 3+
+**query_string(string)** function
 
-**Bug Tracker**: `github.com/russianidiot/query_string.py/issues`__
+.. code-block:: python
 
-__ https://github.com/russianidiot/query_string.py/issues
+	>>> from query_string import *
+
+	>>> query_string('https://site.org/php.py?k=v&k2=v2&k3=v3#anchor')
+	{'k': 'v','k2': 'v2', 'k3': 'v3'}
+
+	>>> query_string('k=v&k2=v2&k3=v3#anchor')
+	{'k': 'v','k2': 'v2', 'k3': 'v3'}
+
+----
+
+Feedback
+~~~~~~~~
+
+|github_issues| - Github Issues
+
+.. |github_issues| image:: https://img.shields.io/github/issues/russianidiot/query_string.py.svg
+	:target: https://github.com/russianidiot/query_string.py/issues
+
+|gitter| - **Chat** with me (english/russian) 
+
+.. |gitter| image:: https://badges.gitter.im/russianidiot/query_string.py.svg
+	:target: https://gitter.im/russianidiot/query_string.py
+
+`russianidiot.github.io/python/`_  - my Python packages
+
+.. _russianidiot.github.io/python/: http://russianidiot.github.io/python/
