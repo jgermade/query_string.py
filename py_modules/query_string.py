@@ -28,8 +28,8 @@ def query_string(string):
     return _parse_qs(qs)
 
 if __name__ == "__main__":
-    print(query_string("https://site.org/cgi.py?k=v&k2=v2&k3=v3"))
-    print(query_string("cgi.py?k=v&k2=v2&k3=v3"))
+    print(query_string("https://site.org/index.php?k=v&k2=v2&k3=v3"))
+    print(query_string("index.php?k=v&k2=v2&k3=v3"))
     print(query_string("k=v&k2=v2&k3=v3"))
     print(query_string("k=v&k2=v2&k3=v3#anchor"))
-    print(query_string("https://travis-ci.org"))  # {}
+    print(query_string("https://site.com"))  # {}

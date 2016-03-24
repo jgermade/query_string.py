@@ -1,5 +1,2 @@
-dict
-ordereddict
 public
-self
 setuptools
