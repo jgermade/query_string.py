@@ -28,7 +28,7 @@ if exists(path) and isdir(path):
     listdir = filter(valid_script_name, os.listdir(path))
     find = map(lambda name: join(path, name), listdir)
     files = filter(isfile, find)
-    scripts = map(lambda name: "scripts/%s" % basename(name), files)
+    scripts = list(map(lambda name: "scripts/%s" % basename(name), files))
     for script in scripts:
         dst = join("/usr/local/bin/%s" % basename(script))
         if exists(dst) and not isfile(dst):
