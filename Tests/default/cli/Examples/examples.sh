@@ -17,7 +17,10 @@ count="$(echo "$find" | wc -l | tr -d ' ')"
 echo "Examples/ $count files"
 
 find="$(echo "$find" | while read f; do
-	[[ "${f##*/}" != .* ]] && file "$f" | grep -q "script text" && echo "$f"
+	# file output:
+	# OS X: python script text, bash script text, ...
+	# linux: python script, bash script
+	[[ "${f##*/}" != .* ]] && file "$f" | grep -q "script" && echo "$f"
 done)"
 [[ -z $find ]] && echo "SKIP: Examples/ 0 script files" && exit 0
 
