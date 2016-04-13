@@ -3,7 +3,7 @@ try:
     from urlparse import parse_qs
 except ImportError:
     from urllib.parse import parse_qs
-from public import *
+from public import public
 
 
 def _parse_qs(query):
