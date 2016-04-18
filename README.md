@@ -1,8 +1,9 @@
 ![python](https://img.shields.io/badge/language-python-blue.svg)[![PyPI](https://img.shields.io/pypi/pyversions/query_string.svg)](https://pypi.python.org/pypi/query_string)
-[![landscape.io](https://landscape.io/github/russianidiot/query_string.py/master/landscape.svg?style=flat)](https://landscape.io/github/russianidiot/query_string.py/master)
+
+[![codacy.com](https://img.shields.io/codacy/9f7c296290b84b60801f3ad5bf7c4596.svg)](https://www.codacy.com/app/russianidiot-github/query_string-py/dashboard)[![landscape.io](https://landscape.io/github/russianidiot/query_string.py/master/landscape.svg?style=flat)](https://landscape.io/github/russianidiot/query_string.py/master)[![Code Climate](https://img.shields.io/codeclimate/github/russianidiot/query_string.py.svg)](https://codeclimate.com/github/russianidiot/query_string.py)
 [![Code Health](https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/russianidiot/query_string.py)
 
-[![Build Status](https://travis-ci.org/russianidiot/query_string.py.svg?branch=master)](https://travis-ci.org/russianidiot/query_string.py)[![drone.io](https://drone.io/github.com/russianidiot/query_string.py/status.png)](https://drone.io/github.com/russianidiot/query_string.py)[![codeship](https://img.shields.io/codeship/c3ab1e50-e322-0133-3a99-2adfd896b34c.svg)](https://codeship.com/projects/145861)[![Wercker](https://img.shields.io/wercker/ci/russianidiot/query_string.py.svg)](https://app.wercker.com/#applications/None/)
+[![Build Status](https://travis-ci.org/russianidiot/query_string.py.svg?branch=master)](https://travis-ci.org/russianidiot/query_string.py)[![drone.io](https://drone.io/github.com/russianidiot/query_string.py/status.png)](https://drone.io/github.com/russianidiot/query_string.py)[![Wercker](https://img.shields.io/wercker/ci/russianidiot/query_string.py.svg)](https://app.wercker.com/#applications/None/)
 
 [![PyPI](https://img.shields.io/pypi/v/query_string.svg)](https://pypi.python.org/pypi/query_string)
 [![PyPI](https://img.shields.io/pypi/dm/query_string.svg)](https://pypi.python.org/pypi/query_string)
@@ -19,19 +20,22 @@ pip:
 
 #### Usage
 
-**query_string(string)** function
+```python
+>>> from query_string import query_string
+
+>>> query_string(url)
+```
+
+#### Example
 
 ```python
->>> from query_string import *
-
 >>> query_string('https://site.org/index.php?k=v&k2=v2&k3=v3#anchor')
 {'k': 'v','k2': 'v2', 'k3': 'v3'}
 
 >>> query_string('k=v&k2=v2&k3=v3')
 {'k': 'v','k2': 'v2', 'k3': 'v3'}
 ```
-
-[Examples/](https://github.com/russianidiot/query_string.py/tree/master/Examples)
+```
 
 Sources:
 *	[py_modules/query_string.py](https://github.com/russianidiot/query_string.py/blob/master/py_modules/query_string.py)

@@ -5,7 +5,6 @@ except ImportError:
     from urllib.parse import parse_qs
 from public import public
 
-
 def _parse_qs(query):
     kwargs = dict()
     for k, v in parse_qs(query).items():
@@ -26,10 +25,3 @@ def query_string(string):
     if "#" in qs:
         qs = qs.split("#")[0]
     return _parse_qs(qs)
-
-if __name__ == "__main__":
-    print(query_string("https://site.org/index.php?k=v&k2=v2&k3=v3"))
-    print(query_string("index.php?k=v&k2=v2&k3=v3"))
-    print(query_string("k=v&k2=v2&k3=v3"))
-    print(query_string("k=v&k2=v2&k3=v3#anchor"))
-    print(query_string("https://site.com"))  # {}

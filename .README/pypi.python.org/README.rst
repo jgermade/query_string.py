@@ -3,16 +3,13 @@
 .. image:: https://img.shields.io/pypi/pyversions/query_string.svg
    :target: https://pypi.python.org/pypi/query_string
 
-.. image:: https://img.shields.io/pypi/pyversions/query_string.svg
-   :target: https://pypi.python.org/pypi/query_string
-
- |codacy| |landscape| |codeclimate| |scrutinizer|
+|codacy| |landscape| |codeclimate| |scrutinizer|
 
 .. |scrutinizer| image:: https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/quality-score.png?b=master
    :target: https://scrutinizer-ci.com/g/russianidiot/query_string.py/master
    :alt: scrutinizer-ci.com
 
-.. |codacy| image:: https://img.shields.io/codacy/None.svg
+.. |codacy| image:: https://img.shields.io/codacy/9f7c296290b84b60801f3ad5bf7c4596.svg
    :target: https://www.codacy.com/app/russianidiot-github/query_string-py/dashboard
    :alt: codacy.com
 
@@ -32,21 +29,23 @@ Install
 Usage
 `````
 
-**query_string(string)** function
+.. code:: python
+	
+	>>> from query_string import query_string
+	
+	>>> query_string(url)
 
-.. code-block:: python
+Example
+```````
 
-	>>> from query_string import *
-
+.. code:: python
+	
 	>>> query_string('https://site.org/index.php?k=v&k2=v2&k3=v3#anchor')
 	{'k': 'v','k2': 'v2', 'k3': 'v3'}
-
-	>>> query_string('k=v&k2=v2&k3=v3#anchor')
+	
+	>>> query_string('k=v&k2=v2&k3=v3')
 	{'k': 'v','k2': 'v2', 'k3': 'v3'}
-
-`Examples/`_
-
-.. _Examples/: https://github.com/russianidiot/query_string.py/tree/master/Examples
+	```
 
 Sources:
 
