@@ -47,6 +47,10 @@ Example
 	{'k': 'v','k2': 'v2', 'k3': 'v3'}
 	```
 
+`Examples/`_
+
+.. _Examples/: https://github.com/russianidiot/query_string.py/tree/master/Examples
+
 Sources:
 
 *	`py_modules/query_string.py`_
