@@ -5,6 +5,7 @@ except ImportError:
     from urllib.parse import parse_qs
 from public import public
 
+
 def _parse_qs(query):
     kwargs = dict()
     for k, v in parse_qs(query).items():
