@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from query_string import *
+from query_string import query_string
 
 qs = query_string("")  # {}
 print(qs)
