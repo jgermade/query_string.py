@@ -6,19 +6,19 @@
 |codacy| |landscape| |codeclimate| |scrutinizer|
 
 .. |scrutinizer| image:: https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/quality-score.png?b=master
-   :target: https://scrutinizer-ci.com/g/russianidiot/query_string.py/master
+   :target: https://scrutinizer-ci.com/g/russianidiot/query_string.py/
    :alt: scrutinizer-ci.com
 
-.. |codacy| image:: https://img.shields.io/codacy/9f7c296290b84b60801f3ad5bf7c4596.svg
+.. |codacy| image:: https://api.codacy.com/project/badge/Grade/9f7c296290b84b60801f3ad5bf7c4596
    :target: https://www.codacy.com/app/russianidiot-github/query_string-py/dashboard
    :alt: codacy.com
 
-.. |codeclimate| image:: https://img.shields.io/codeclimate/github/russianidiot/query_string.py.svg
+.. |codeclimate| image:: https://codeclimate.com/github/russianidiot/query_string.py/badges/gpa.svg
    :target: https://codeclimate.com/github/russianidiot/query_string.py
    :alt: codeclimate.com
 
 .. |landscape| image:: https://landscape.io/github/russianidiot/query_string.py/master/landscape.svg?style=flat
-   :target: https://landscape.io/github/russianidiot/query_string.py/master
+   :target: https://landscape.io/github/russianidiot/query_string.py/master/landscape.svg?style=flat
    :alt: landscape.io
 
 Install
