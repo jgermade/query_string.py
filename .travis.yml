@@ -1,0 +1,71 @@
+language: python
+cache:
+  directories: 
+    - $HOME/.cache/pip
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  #- "nightly" # currently points to 3.6-dev
+  # nightly python not aviable :( can't test
+
+sudo: false
+
+env:
+  - PYTHONIOENCODING="UTF-8"
+
+branches:
+  only:
+    - master
+
+git:
+  depth: 10
+  # known-bug:
+  # fast pushes to github, slow tests (many repos)
+  # travis can't clone required commit with small depth (1,2,...)
+  # git checkout -qf <sha>
+  # fatal: reference is not a tree: <sha>
+
+# https://docs.travis-ci.com/user/notifications/
+notifications:
+  # https://docs.travis-ci.com/user/notifications#Configuring-email-notifications
+  email:
+    recipients:
+      - continuous.integration.errors@gmail.com
+    on_success: never
+    on_failure: always
+  irc: false
+    #channels:
+    #  - "chat.freenode.net#russianidiot"
+    #on_success: never
+    #on_failure: always
+    #use_notice: true
+    #skip_join: true
+
+before_install:
+  - env
+
+install:
+  - bash .Tests/install.sh
+
+before_script:
+  - pwd
+
+# command to run tests
+script:
+  - bash .Tests/run.sh
+
+after_script:
+  -
+
+after_failure:
+  - pwd
+
+# Calculate coverage
+#after_success:
+  #- coveralls 
+  # Couldn't find a repository matching this job.
