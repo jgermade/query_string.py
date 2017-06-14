@@ -1,1 +1,1 @@
-https://github.com/russianidiot-tests/.tests.git
+git@github.com:russianidiot-tests/.tests.git
