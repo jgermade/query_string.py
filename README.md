@@ -9,14 +9,12 @@ README generated with readmemako.py (github.com/russianidiot/readme-mako.py) and
 [![PyPI](https://img.shields.io/pypi/pyversions/query_string.svg)](https://pypi.python.org/pypi/query_string)
 [![PyPI](https://img.shields.io/pypi/v/query_string.svg)](https://pypi.python.org/pypi/query_string)
 <!-- line break -->
-[![](https://codeclimate.com/github/russianidiot/query_string.py/badges/gpa.svg)](https://codeclimate.com/russianidiot/query_string.py)
-[![](https://landscape.io/github/russianidiot/query_string.py/master/landscape.svg?style=flat)](https://landscape.io/github/russianidiot/query_string.py)
-[![](https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/russianidiot/query_string.py/)
 <!-- line break -->
 [![](https://api.shippable.com/projects/57068cbb2a8192902e1bbbda/badge?branch=master)](https://app.shippable.com/projects/57068cbb2a8192902e1bbbda)
 [![](https://app.wercker.com/status/41a0b06a61890066f9102fcde8e111cb/s/master)](https://app.wercker.com/russianidiot/query_string.py)
 [![](https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/build.png?b=master)](https://scrutinizer-ci.com/g/russianidiot/query_string.py/)
-[![](https://api.travis-ci.org/russianidiot/query_string.py.svg)](https://travis-ci.org/russianidiot/query_string.py/)
+[![](https://semaphoreci.com/api/v1/russianidiot/query_string-py/branches/master/badge.svg)](https://semaphoreci.com/russianidiot/query_string-py)
+[![](https://api.travis-ci.org/russianidiot/query_string.py.svg)](https://travis-ci.org/russianidiot/query_string.py)
 
 
 ### Usage
