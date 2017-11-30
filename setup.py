@@ -1,20 +1,27 @@
 #!/usr/bin/env python
-import os
+from distutils.core import setup # Python Standard Library
+# from setuptools import setup # pypi.org/project/setuptools/ (python3.2 not supported)
 try:
-    from setupfiles import setup
+    from configparser import ConfigParser # python 3+
 except ImportError:
-    from distutils.core import setup
+    from ConfigParser import ConfigParser # python < 3.0
 
-kwargs = dict()
+# ~/.pydistutils.cfg
+# path/to/project.py/setup.cfg
+# path/to/project.py/setup.py
 
-# known-issues:
-# pip running `python setup.py egg_info` before installation:
-# 1) pip checks metadata name pip/req/req_install.py:run_egg_info()
-# 2) pip attempts to discover all of the dependencies before installation
-name = os.path.basename(os.getcwd()).split(".")[0].lower()
+def read_configuration(path):
+    # setuptools.config.read_configuration read metadata/options ONLY
+    result = dict()
+    config = ConfigParser()
+    config.read(path)
+    for section in config.sections():
+        for key, val in config.items(section):
+            if val[0] == "\n":
+                val = list(filter(None,val.splitlines()))
+            result[key] = val
+    return result
 
-path = os.path.join(os.getcwd(), "requirements.txt")
-if os.path.exists(path) and os.path.isfile(path):
-    kwargs["install_requires"] = open(path).read().splitlines()
-
-setup(name=name, **kwargs)
+path = __file__.replace("setup.py","setup.cfg")
+setup_cfg_data = read_configuration(path)
+setup(**setup_cfg_data)

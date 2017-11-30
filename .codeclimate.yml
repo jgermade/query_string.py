@@ -17,5 +17,5 @@ languages:
 # http://docs.codeclimate.com/article/166-excluding-files-folders
 #
 exclude_paths:
-  - Tests/**
-  - Examples/**
+  - tests/**
+  - examples/**

@@ -5,13 +5,16 @@ cache:
 python:
   - "2.6"
   - "2.7"
-  - "3.2"
+  # python 3.2 deprecated (not supported by pip, setuptools, etc)
   - "3.3"
   - "3.4"
   - "3.5"
   - "3.5-dev" # 3.5 development branch
-  #- "nightly" # currently points to 3.6-dev
-  # nightly python not aviable :( can't test
+  - "3.6"
+  - "3.6-dev" # 3.6 development branch
+  - "3.7-dev" # 3.7 development branch
+  - "nightly"
+# https://docs.travis-ci.com/user/languages/python/
 
 sudo: false
 
@@ -50,14 +53,14 @@ before_install:
   - env
 
 install:
-  - bash .Tests/install.sh
+  - bash tests/.sh/install.sh
 
 before_script:
   - pwd
 
 # command to run tests
 script:
-  - bash .Tests/run.sh
+  - bash tests/.sh/run.sh
 
 after_script:
   -
