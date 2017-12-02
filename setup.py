@@ -17,7 +17,7 @@ def read_configuration(path):
     config.read(path)
     for section in config.sections():
         for key, val in config.items(section):
-            if val[0] == "\n":
+            if val and val[0] == "\n":
                 val = list(filter(None,val.splitlines()))
             result[key] = val
     return result
