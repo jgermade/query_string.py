@@ -2,41 +2,29 @@
 
 
 .. image:: https://img.shields.io/badge/Language-Python-blue.svg?style=plastic
-    :target: none
+	:target: none
 
 .. image:: https://img.shields.io/pypi/pyversions/query_string.svg
-    :target: https://pypi.org/pypi/query_string
+	:target: https://pypi.org/pypi/query_string
 
 .. image:: https://img.shields.io/pypi/v/query_string.svg
-    :target: https://pypi.org/pypi/query_string
+	:target: https://pypi.org/pypi/query_string
 
 |
 
 .. image:: https://api.codacy.com/project/badge/Grade/da7cca99ede548f9aa1ac583d39f4afd
-    :target: https://www.codacy.com/app/russianidiot/query_string-py
+	:target: https://www.codacy.com/app/russianidiot/query_string-py
 
 .. image:: https://codeclimate.com/github/russianidiot/query_string.py/badges/gpa.svg
-    :target: https://codeclimate.com/github/russianidiot/query_string.py
+	:target: https://codeclimate.com/github/russianidiot/query_string.py
 
 .. image:: https://landscape.io/github/russianidiot/query_string.py/master/landscape.svg?style=flat
-    :target: https://landscape.io/github/russianidiot/query_string.py
+	:target: https://landscape.io/github/russianidiot/query_string.py
 
 .. image:: https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/quality-score.png?b=master
-    :target: https://scrutinizer-ci.com/g/russianidiot/query_string.py/
+	:target: https://scrutinizer-ci.com/g/russianidiot/query_string.py/
 
 |
-
-.. image:: https://scrutinizer-ci.com/g/russianidiot/query_string.py/badges/build.png?b=master
-    :target: https://scrutinizer-ci.com/g/russianidiot/query_string.py/
-
-.. image:: https://semaphoreci.com/api/v1/russianidiot/query_string-py/branches/master/badge.svg
-    :target: https://semaphoreci.com/russianidiot/query_string-py
-
-.. image:: https://api.travis-ci.org/russianidiot/query_string.py.svg?branch=master
-    :target: https://travis-ci.org/russianidiot/query_string.py/
-
-.. image:: https://app.wercker.com/status/41a0b06a61890066f9102fcde8e111cb/s/master
-    :target: https://app.wercker.com/russianidiot/query_string.py
 
 
 
