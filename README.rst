@@ -64,7 +64,6 @@ Examples
 	
 	>>> query_string('k=v&k2=v2&k3=v3')
 	{'k': 'v','k2': 'v2', 'k3': 'v3'}
-	```
 
 
 
